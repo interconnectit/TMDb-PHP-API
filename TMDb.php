@@ -158,12 +158,14 @@ class TMDb
 	 * Retrieve all basic information for a particular movie
 	 *
 	 * @param mixed $id					TMDb-id or IMDB-id
+	 * @param mixed $append				Movie method results to append to the movie result
 	 * @param mixed $lang				Filter the result with a language (ISO 3166-1) other then default, use FALSE to retrieve results from all languages
 	 * @return TMDb result array
 	 */
-	public function getMovie($id, $lang = NULL)
+	public function getMovie($id, $append = '', $lang = NULL)
 	{
 		$params = array(
+			'append_to_reponse' => implode( ',', (array)$append_to_response ),
 			'language' => ($lang !== NULL) ? $lang : $this->getLang(),
 		);
 		return $this->_makeCall('movie/'.$id, $params);
