@@ -165,7 +165,7 @@ class TMDb
 	public function getMovie($id, $append = '', $lang = NULL)
 	{
 		$params = array(
-			'append_to_reponse' => implode( ',', (array)$append ),
+			'append_to_response' => implode( ',', (array)$append ),
 			'language' => ($lang !== NULL) ? $lang : $this->getLang(),
 		);
 		return $this->_makeCall('movie/'.$id, $params);
@@ -850,7 +850,7 @@ class TMDb
 			throw new TMDbException('CURL-extension not loaded');
 		}
 
-		$results = json_decode($body, TRUE);
+		$results = json_decode($body);
 
 		if(strpos($function, 'authentication/token/new') !== FALSE)
 		{
