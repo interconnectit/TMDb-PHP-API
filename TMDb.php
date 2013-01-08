@@ -165,7 +165,7 @@ class TMDb
 	public function getMovie($id, $append = '', $lang = NULL)
 	{
 		$params = array(
-			'append_to_reponse' => implode( ',', (array)$append_to_response ),
+			'append_to_reponse' => implode( ',', (array)$append ),
 			'language' => ($lang !== NULL) ? $lang : $this->getLang(),
 		);
 		return $this->_makeCall('movie/'.$id, $params);
