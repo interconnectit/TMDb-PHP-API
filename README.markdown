@@ -31,7 +31,7 @@ All methods are listed here, for use, look into the code, everything is document
 ### Movies ###
 
 - searchMovie($query, [$page], [$adult], [$lang])
-- getMovie($id, [$lang])
+- getMovie($id, [$append], [$lang])
 - getMovieCast($id)
 - getMovieImages($id, [$lang])
 - getMovieKeywords($id)
