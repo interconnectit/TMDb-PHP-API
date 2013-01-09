@@ -850,7 +850,7 @@ class TMDb
 			throw new TMDbException('CURL-extension not loaded');
 		}
 
-		$results = json_decode($body);
+		$results = json_decode($body, TRUE);
 
 		if(strpos($function, 'authentication/token/new') !== FALSE)
 		{
