@@ -6,9 +6,9 @@
  *
  * @author Jonas De Smet - Glamorous
  * @since 09.11.2009
- * @date 16.11.2012
+ * @date 09.01.2013
  * @copyright Jonas De Smet - Glamorous
- * @version 1.5.1
+ * @version 1.5.2
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  */
 
@@ -27,7 +27,7 @@ class TMDb
 	const API_SCHEME = 'http://';
 	const API_SCHEME_SSL = 'https://';
 
-	const VERSION = '1.5.0';
+	const VERSION = '1.5.2';
 
 	/**
 	 * The API-key
